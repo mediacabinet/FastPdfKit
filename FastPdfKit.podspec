@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source = { :git => "https://github.com/mediacabinet/FastPdfKit.git", :tag => "static-headers" }
+  s.source = { :git => "https://github.com/mediacabinet/FastPdfKit.git", :tag => "3.4.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -88,11 +88,11 @@ Pod::Spec.new do |s|
   # s.public_header_files = "Classes/**/*.h"
   # s.header_mappings_dir = "vendor/external"
 
-#s.source_files  = [
-#       "FastPdfKit.embeddedframework/FastPdfKit.framework/Versions/A/Headers/*.h"
-#   ]
+    s.source_files  = [
+       "FastPdfKit.embeddedframework/FastPdfKit.framework/Versions/A/Headers/*.h"
+    ]
 
-    s.vendored_frameworks = 'FastPdfKit.embeddedframework/FastPdfKit.framework'
+    s.vendored_frameworks = 'build/FastPdfKit.framework'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -111,7 +111,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-# s.framework  = "FastPdfKit"
+    s.ios.framework  = "FastPdfKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"

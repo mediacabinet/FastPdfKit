@@ -59,8 +59,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-   s.platform     = :ios, "6.0"
+  s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -111,9 +110,16 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-    s.ios.framework  = "FastPdfKit"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  
+  s.frameworks  = 'AudioToolbox', 'FastPdfKit', 'AVFoundation', 'MediaPlayer'
 
+  # 32 - BIT
+  s.xcconfig   =  {
+    'ARCHS' => '$(ARCHS_STANDARD_32_BIT)',
+    'VALID_ARCHS' => '$(ARCHS_STANDARD_32_BIT)'
+  }
+
+  
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
